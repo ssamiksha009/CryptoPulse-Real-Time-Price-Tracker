@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tracker Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <h1>Crypto Tracker Pro 📈</h1>
+            <button id="toggleMode">🌙 Dark Mode</button>
+        </nav>
+
+        <div class="controls">
+            <input type="text" id="search" placeholder="🔍 Search coin...">
+            <select id="currency">
+                <option value="usd">USD ($)</option>
+                <option value="eur">EUR (€)</option>
+                <option value="gbp">GBP (£)</option>
+            </select>
+        </div>
+
+        <div class="card">
+            <h2>Market Overview</h2>
+            <canvas id="cryptoChart"></canvas>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>24h Change</th>
+                        <th>Market Cap</th>
+                        <th>Fav</th>
+                    </tr>
+                </thead>
+                <tbody id="cryptoTable"></tbody>
+            </table>
+        </div>
+
+        <div class="alerts">
+            <h2>🔔 Price Alerts</h2>
+            <input type="text" id="alertCoin" placeholder="Coin (e.g. BTC)">
+            <input type="number" id="alertPrice" placeholder="Target Price">
+            <button id="setAlert">Set Alert</button>
+            <ul id="alertList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
